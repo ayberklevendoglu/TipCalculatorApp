@@ -24,10 +24,10 @@ class MainActivity : AppCompatActivity() {
         val okay = binding.radioButtonOkay
         val switch = binding.switch1
         if (amazing.isChecked && switch.isChecked) binding.textViewTipAmount.text = "Tip amount: $${((serviceCost * 20) / 100).roundToInt()}"
-        if (amazing.isChecked && !switch.isChecked) binding.textViewTipAmount.text = "Tip amount: $${((serviceCost * 20) / 100)}"
-        if (good.isChecked && switch.isChecked) binding.textViewTipAmount.text = "Tip amount: $${((serviceCost * 18) / 100).roundToInt()}"
-        if (good.isChecked && !switch.isChecked) binding.textViewTipAmount.text = "Tip amount: $${((serviceCost * 18) / 100)}"
-        if (okay.isChecked && switch.isChecked) binding.textViewTipAmount.text = "Tip amount: $${((serviceCost * 15) / 100).roundToInt()}"
-        if (okay.isChecked && !switch.isChecked) binding.textViewTipAmount.text = "Tip amount: $${((serviceCost * 15) / 100)}"
+        else if (amazing.isChecked && !switch.isChecked) binding.textViewTipAmount.text = "Tip amount: $${((serviceCost * 20) / 100)}"
+        else if (good.isChecked && switch.isChecked) binding.textViewTipAmount.text = "Tip amount: $${((serviceCost * 18) / 100).roundToInt()}"
+        else if (good.isChecked && !switch.isChecked) binding.textViewTipAmount.text = "Tip amount: $${((serviceCost * 18) / 100)}"
+        else if (okay.isChecked && switch.isChecked) binding.textViewTipAmount.text = "Tip amount: $${((serviceCost * 15) / 100).roundToInt()}"
+        else if (okay.isChecked && !switch.isChecked) binding.textViewTipAmount.text = "Tip amount: $${((serviceCost * 15) / 100)}"
     }
 }
